@@ -15,7 +15,14 @@ class MMSpider:
         self.headers = {'user-agent':
                         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
                         }
-        self.base_path = r"F:\TaoBaoMM"
+        print('''Author:Zhang\nEmail:codecool97@gmail.com\n示例路径: F:\TaoBaoMM
+                ''')
+        self.default_path = r"F:\TaoBaoMM"
+        self.base_path = input("请输入你要将MM存放的位置"r'')
+        if not os.path.exists(self.base_path):
+            os.makedirs(self.base_path)
+        else:
+            return
         # MM个人主页
         self.base_person_url = "http://mm.taobao.com/self/aiShow.htm?userId="
         # MM相册主页
@@ -26,7 +33,6 @@ class MMSpider:
         self.current_page = 1
         self.album_pattern = re.compile('''<h4>.*?album_id=(.*?)&''', re.S)
         self.album_page_pattern = re.compile('''<input name="totalPage" id="J_Totalpage" value="(.*?)"''', re.S)
-
 
     # 得到json中数据
     def get_person_dict(self, currentPage):
@@ -116,8 +122,6 @@ class MMSpider:
         try:
             url = self.person_album_url + str(userId)
             r = requests.get(url)
-            # print(r.encoding)
-            # print(r.text)
             return re.search(self.album_page_pattern, r.text).group(1)
         except Exception as e:
             return "获取相册页面数量发生错误", e
