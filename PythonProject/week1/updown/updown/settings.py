@@ -25,7 +25,7 @@ SECRET_KEY = 'fjfv4l8p1hp0q+=svj_-ipv#qbu(hs=@9d0(43(4pza(qfwrww'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', 'demo.codedraw.cn']
 
 
 # Application definition
