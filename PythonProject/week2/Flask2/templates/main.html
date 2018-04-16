@@ -1,0 +1,48 @@
+<!doctype html>
+<head>
+ <title>SyNr &amp; CodeCool</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <!-- js -->
+</head>
+<div class="container">
+    <header id="site-header">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-8">
+                <div class="logo">
+                    <h1><a href="{{ url }}"><b>SyNr</b> &amp; CodeCool</a></h1>
+                </div>
+            </div><!-- col-md-4 -->
+                <div class="col-md-8 col-sm-7 col-xs-4">
+                    <nav class="main-nav" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" id="trigger-overlay" class="navbar-toggle">
+                                <span class="ion-navicon"></span>
+                            </button>
+                        </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                        <li class="cl-effect-11"><a href="{{ url }}">Archive</a></li>
+                        <li class="cl-effect-11"><a href="{{ url_for('show_home') }}">Useful Links</a></li>
+                        <li class="cl-effect-11"><a href="{{ url_for('show_home') }}">About</a></li>
+                        <li class="cl-effect-11"><a href="{{ url_for('show_home') }}">Contact</a></li>
+                              <!--判断是否登录-->
+                          {% if not session.logged_in %}
+                            <li class="cl-effect-11"><a href="{{ url_for('login') }}">登录</a></li>
+                          {% else %}
+                            <li class="cl-effect-11"><a href="{{ url_for('logout') }}">退出</a></li>
+                          {% endif %}
+                      </ul>
+                    </div>
+
+            </div>
+            {% block body %}{% endblock %}
+    </header>
+</div>
