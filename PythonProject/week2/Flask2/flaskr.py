@@ -43,17 +43,20 @@ def before_request():
     g.db = connect_db()
 
 
-@app.route('/index')
-def show_home():
-    cur = g.db.execute('select title, text from entries order by id desc')
-    entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
-    return render_template('index.html', entries=entries)
+@app.route('/useful_links')
+def show_friends():
+    return render_template('links.html')
+
+
+@app.route('/about')
+def show_about():
+    return render_template('about.html')
 
 
 @app.route('/')
 def show_entries():
-    cur = g.db.execute('select title, text from entries order by id desc')
-    entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
+    cur = g.db.execute('select title, description, date, author from entries order by id desc')
+    entries = [dict(title=row[0], description=row[1], date=row[2], author=row[3]) for row in cur.fetchall()]
     return render_template('index.html', entries=entries)
 
 
@@ -63,7 +66,14 @@ def show_entries():
 def add_entry():
     if not session.get('logged_in'):
         abort(401)
-    g.db.execute('insert into entries (title, text) values (?, ?)', [request.form['title'], request.form['text']])
+    g.db.execute('insert into entries (title, description, content, date, author, tags) values (?, ?, ?, ?, ?, ?)', [
+        request.form['title'],
+        request.form['description'],
+        request.form['content'],
+        request.form['date'],
+        request.form['author'],
+        request.form['tags']
+                                                                                                         ])
     g.db.commit()
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))
@@ -93,5 +103,4 @@ def logout():
 
 if __name__ == '__main__':
     app.run(port=80)
-    show_home
     show_entries()
