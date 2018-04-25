@@ -9,6 +9,7 @@ import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 from contextlib import closing
 
+
 # sql配置文件
 DATABASE = 'C:\\Users\\Administrator\\PycharmProjects\\PythonProject\\week2\\Flask2\\temp\\flaskr.db'
 DEBUG = True
@@ -41,6 +42,13 @@ def connect_db():
 @app.before_request
 def before_request():
     g.db = connect_db()
+
+
+@app.route('/post/<int:id>')
+def get_post(id):
+    cur = g.db.execute('select content from entries where id = id')
+    entries = [dict(id=row[0]) for row in cur.fetchall()]
+    return render_template('archive.html', entries=entries)
 
 
 @app.route('/useful_links')
@@ -101,6 +109,23 @@ def logout():
     return redirect(url_for('show_entries'))
 
 
+# Markdown
+@app.route('/test1')
+def test_1():
+    mkd = '''
+    # header
+    ## header2
+    [picture](http://www.example.com)
+    * 1
+    * 2
+    * 3
+    **bold**
+    '''
+
+    return render_template('test1.html', mkd=mkd)
+
+
 if __name__ == '__main__':
     app.run(port=80)
-    show_entries()
+    # show_entries()
+    get_archives()
