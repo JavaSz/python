@@ -1,75 +1,162 @@
-# -*- coding: utf-8 -*-
+# -*- coding: gb2312 -*-
 # @Time    : 2018/3/7 19:55
 # @Author  : Zhang
 # @FileName: ZFJW.py
 # @Software: PyCharm
-# @Blog    ï¼šhttps://codedraw.cn
+# @Blog    £ºhttps://codedraw.cn
 import requests
 import bs4
 import os
-# è¿™æ˜¯Pythonçš„ä¸€ä¸ªéå¸¸æœ‰åçš„å›¾ç‰‡åº“ï¼Œè¿™é‡Œæˆ‘ä»¬ç”¨å®ƒæ¥æ˜¾ç¤ºéªŒè¯ç 
+import re
+# ÕâÊÇPythonµÄÒ»¸ö·Ç³£ÓĞÃûµÄÍ¼Æ¬¿â£¬ÕâÀïÎÒÃÇÓÃËüÀ´ÏÔÊ¾ÑéÖ¤Âë
 from PIL import Image
+from pyquery import PyQuery as pq
+
+
+headers = {
+        "Host": "220.178.71.156:85",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Language": "zh-CN,zh;q=0.9",
+        "Accept-Encoding": "gzip, deflate",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+        "Cookie": "td_cookie=2513233523; td_cookie=2512371738"
+    }
+
+
+def save_txt(text, data, col):
+    '''
+    ´æ´¢·ÖÎö½á¹û
+    :param text: ÎÄ¼ş±£´æÄ¿Â¼
+    :param data: ·ÖÎö½á¹û
+    :param col: ÁĞÊıÄ¿
+    :return:
+    '''
+
+    res = ''
+    for i in range(0, len(data)):
+        res = res + ('%s\t') % data[i]
+        if (i+1) % col == 0 and i > 0:
+            res = res + '\n'
+    fw = open(text, 'a')
+    fw.write(res)
+    fw.close()
+
+
+def get_scores(txt, data, col):
+    '''
+    ½âÎöHTML,»ñÈ¡³É¼¨Êı¾İ
+    :param txt: ÎÄ¼ş±£´æÄ¿Â¼
+    :param data: HTMLÊı¾İÔ´
+    :param col: ÁĞÊıÄ¿
+    :return:
+    '''
+
+    pResult = pq(data)
+    print(pResult('tr'))
+    data_result = []
+    for dat in pResult('tr'):
+        if len(dat) == col:
+            for i in range(len(dat)):
+                xxx = pq(dat).find('td').eq(i).text().strip()
+                print(xxx)
+                data_result.append(xxx)
+    save_txt(txt, data_result, col)
 
 
 def get_post_data(url):
-    html = requests.get(url)
-
+    html = requests.get(url, headers=headers)
     soup = bs4.BeautifulSoup(html.text, 'lxml')
 
-    # æ‰¾åˆ°éªŒè¯å‚æ•°
+    # ÕÒµ½ÑéÖ¤²ÎÊı
     __VIEWSTATE = soup.find('input', attrs={'name': '__VIEWSTATE'})['value']
 
-    # ä¸‹è½½éªŒè¯ç å›¾ç‰‡
+    # ÏÂÔØÑéÖ¤ÂëÍ¼Æ¬
     pic = requests.get(
         'http://220.178.71.156:85/(gxv2le55n4jswm45mkv14o2n)/CheckCode.aspx').content
     with open('ver_pic.png', 'wb') as f:
         f.write(pic)
 
-    # æ‰“å¼€éªŒè¯ç å›¾ç‰‡
+    # ´ò¿ªÑéÖ¤ÂëÍ¼Æ¬
     image = Image.open('{}/ver_pic.png'.format(os.getcwd()))
     image.show()
 
-    # æ„é€ éœ€è¦postçš„å‚æ•°è¡¨
-    data = {'TextBox1': '',
+    # ¹¹ÔìĞèÒªpostµÄ²ÎÊı±í
+    data = {
+            'TextBox1': '',
             'Textbox2': '',
             'TextBox3': '',
             '__VIEWSTATE': '',
-            # ä»¥å­¦ç”Ÿç™»å½•
+            # ÒÔÑ§ÉúµÇÂ¼
             'RadioButtonList1': '\xd1\xa7\xc9\xfa',
             'Button1': '',
-            'lbLanguage': '', }
+            'lbLanguage': '',
+}
 
-    # æ„é€ ç™»å½•çš„postå‚æ•°
+    # ¹¹ÔìµÇÂ¼µÄpost²ÎÊı
     data['__VIEWSTATE'] = __VIEWSTATE
-    data['TextBox3'] = input('è¯·è¾“å…¥å›¾ç‰‡ä¸­çš„éªŒè¯ç ')
-    data['TextBox1'] = input("è¯·è¾“å…¥å­¦å·")
-    data['TextBox2'] = input("è¯·è¾“å…¥å¯†ç ")
+    data['TextBox3'] = input('ÇëÊäÈëÍ¼Æ¬ÖĞµÄÑéÖ¤Âë')
+    data['TextBox1'] = input("ÇëÊäÈëÑ§ºÅ")
+    data['TextBox2'] = input("ÇëÊäÈëÃÜÂë")
 
     return data
 
 
-# ç™»å½•æ•™åŠ¡ç³»ç»Ÿ
+# µÇÂ¼½ÌÎñÏµÍ³
 def login(url, data):
-    # é€šè¿‡requestsåº“æ„é€ ä¸€ä¸ªæµè§ˆå™¨sessionï¼Œè¿™èƒ½å¸®æˆ‘ä»¬è‡ªåŠ¨ã€æŒä¹…çš„ç®¡ç†cookiesï¼Œ
+    # Í¨¹ırequests¿â¹¹ÔìÒ»¸öä¯ÀÀÆ÷session£¬ÕâÄÜ°ïÎÒÃÇ×Ô¶¯¡¢³Ö¾ÃµÄ¹ÜÀícookies£¬
     s = requests.session()
     s.post(url, data=data)
     return s
 
 
-base_url = 'http://220.178.71.156:85/(g2ym3i3rardh2d55w1vzawrh)/default2.aspx'
+base_url = 'http://220.178.71.156:85/(tpz4avigqtgxvf45l324xrej)/default2.aspx'
 data = get_post_data(base_url)
-# print(data)
-# æ¨¡æ‹Ÿç™»å½•æ•™åŠ¡ç³»ç»Ÿ
+# print(data['TextBox1'])
+# Ä£ÄâµÇÂ¼½ÌÎñÏµÍ³
 brow = login(base_url, data)
 test = brow.get(
-    'http://220.178.71.156:85/(g2ym3i3rardh2d55w1vzawrh)/xs_main.aspx?xh=150403126')
+    'http://220.178.71.156:85/(tpz4avigqtgxvf45l324xrej)/xs_main.aspx?xh=%s' % data['TextBox1'])
+# print(test.text)
 
-# æµ‹è¯•çœ‹çœ‹æ˜¯å¦èƒ½æ‰¾åˆ°ç™»é™†åçš„ä¿¡æ¯
-soup = bs4.BeautifulSoup(test.text, 'lxml')
-try:
-    welcome = soup.find('span', attrs={'id': "Label3"}).text
-    name = soup.find('span', attrs={'id': 'xhxm'}).text
-except:
-    welcome = 'fail'
-    name = 'ç™»å½•å¤±è´¥ '
-print(welcome + name)
+ScoresURL = r'href="xscjcx.aspx\?([^<]*)" target'
+res = re.findall(ScoresURL, test.text)
+
+# ÑéÖ¤µÇÂ¼ÊÇ·ñ³É¹¦
+if res:
+    username = res[0].split('&')[1].replace('xm=', '')
+    url = res[0]
+    print(username, u'µÇÂ¼³É¹¦£¡')
+else:
+    print(u'µÇÂ¼Ê§°Ü£¬ÇëÖØĞÂµÇÂ¼£¡')
+    url = ''
+
+Score_url = r'http://220.178.71.156:85/(tpz4avigqtgxvf45l324xrej)/xscjcx.aspx?%s' % url.encode('gb2312')
+# print(Score_url)
+# headers["Referer"] = r'http://220.178.71.156:85/(tpz4avigqtgxvf45l324xrej)/xs_main.aspx?xh=%s' % data['TextBox1']
+# print(headers)
+Score_urls = r'http://220.178.71.156:85/(tpz4avigqtgxvf45l324xrej)/xs_main.aspx?xh=%s' % data['TextBox1']
+# print(Score_urls)
+s = requests.session()
+sg = s.get(url=Score_urls, headers=headers).text
+# print(sg)
+rex2 = 'name="__VIEWSTATE" value="([\S]+)" />'
+vs = re.findall(rex2, sg)
+print(vs)
+scoreData = {
+        '__EVENTARGUMENT': '',
+        '__EVENTTARGET': '',
+        '__VIEWSTATE': vs,
+        'hidLanguage': '',
+        'ddlXN': '',
+        'ddlXQ': '',
+        'ddl_kcxz': '',
+        'btn_zcj': r'ÀúÄê³É¼¨'
+    }
+headers["Referer"] = Score_url
+print(headers)
+scorePage = s.post(url=Score_urls, data=scoreData, headers=headers).content
+# print(scorePage)
+get_scores('scores.txt', scorePage, 15)
+
