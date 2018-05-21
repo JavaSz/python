@@ -9,7 +9,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-base_url = 'https://fly.bgp.sh'
+base_url = input('请输入你要签到的SSPANEL网站')
 
 
 def checkin():
