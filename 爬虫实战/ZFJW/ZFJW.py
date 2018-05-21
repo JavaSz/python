@@ -1,14 +1,14 @@
-# -*- coding: gb2312 -*-
+# -*- coding: utf-8 -*-
 # @Time    : 2018/3/7 19:55
 # @Author  : Zhang
 # @FileName: ZFJW.py
 # @Software: PyCharm
-# @Blog    £ºhttps://codedraw.cn
+# @Blog    ï¼šhttps://codedraw.cn
 import requests
 import bs4
 import os
 import re
-# ÕâÊÇPythonµÄÒ»¸ö·Ç³£ÓĞÃûµÄÍ¼Æ¬¿â£¬ÕâÀïÎÒÃÇÓÃËüÀ´ÏÔÊ¾ÑéÖ¤Âë
+# è¿™æ˜¯Pythonçš„ä¸€ä¸ªéå¸¸æœ‰åçš„å›¾ç‰‡åº“ï¼Œè¿™é‡Œæˆ‘ä»¬ç”¨å®ƒæ¥æ˜¾ç¤ºéªŒè¯ç 
 from PIL import Image
 from pyquery import PyQuery as pq
 
@@ -27,10 +27,10 @@ headers = {
 
 def save_txt(text, data, col):
     '''
-    ´æ´¢·ÖÎö½á¹û
-    :param text: ÎÄ¼ş±£´æÄ¿Â¼
-    :param data: ·ÖÎö½á¹û
-    :param col: ÁĞÊıÄ¿
+    å­˜å‚¨åˆ†æç»“æœ
+    :param text: æ–‡ä»¶ä¿å­˜ç›®å½•
+    :param data: åˆ†æç»“æœ
+    :param col: åˆ—æ•°ç›®
     :return:
     '''
 
@@ -46,10 +46,10 @@ def save_txt(text, data, col):
 
 def get_scores(txt, data, col):
     '''
-    ½âÎöHTML,»ñÈ¡³É¼¨Êı¾İ
-    :param txt: ÎÄ¼ş±£´æÄ¿Â¼
-    :param data: HTMLÊı¾İÔ´
-    :param col: ÁĞÊıÄ¿
+    è§£æHTML,è·å–æˆç»©æ•°æ®
+    :param txt: æ–‡ä»¶ä¿å­˜ç›®å½•
+    :param data: HTMLæ•°æ®æº
+    :param col: åˆ—æ•°ç›®
     :return:
     '''
 
@@ -69,43 +69,43 @@ def get_post_data(url):
     html = requests.get(url, headers=headers)
     soup = bs4.BeautifulSoup(html.text, 'lxml')
 
-    # ÕÒµ½ÑéÖ¤²ÎÊı
+    # æ‰¾åˆ°éªŒè¯å‚æ•°
     __VIEWSTATE = soup.find('input', attrs={'name': '__VIEWSTATE'})['value']
 
-    # ÏÂÔØÑéÖ¤ÂëÍ¼Æ¬
+    # ä¸‹è½½éªŒè¯ç å›¾ç‰‡
     pic = requests.get(
         'http://220.178.71.156:85/(gxv2le55n4jswm45mkv14o2n)/CheckCode.aspx').content
     with open('ver_pic.png', 'wb') as f:
         f.write(pic)
 
-    # ´ò¿ªÑéÖ¤ÂëÍ¼Æ¬
+    # æ‰“å¼€éªŒè¯ç å›¾ç‰‡
     image = Image.open('{}/ver_pic.png'.format(os.getcwd()))
     image.show()
 
-    # ¹¹ÔìĞèÒªpostµÄ²ÎÊı±í
+    # æ„é€ éœ€è¦postçš„å‚æ•°è¡¨
     data = {
             'TextBox1': '',
             'Textbox2': '',
             'TextBox3': '',
             '__VIEWSTATE': '',
-            # ÒÔÑ§ÉúµÇÂ¼
+            # ä»¥å­¦ç”Ÿç™»å½•
             'RadioButtonList1': '\xd1\xa7\xc9\xfa',
             'Button1': '',
             'lbLanguage': '',
 }
 
-    # ¹¹ÔìµÇÂ¼µÄpost²ÎÊı
+    # æ„é€ ç™»å½•çš„postå‚æ•°
     data['__VIEWSTATE'] = __VIEWSTATE
-    data['TextBox3'] = input('ÇëÊäÈëÍ¼Æ¬ÖĞµÄÑéÖ¤Âë')
-    data['TextBox1'] = input("ÇëÊäÈëÑ§ºÅ")
-    data['TextBox2'] = input("ÇëÊäÈëÃÜÂë")
+    data['TextBox3'] = input('è¯·è¾“å…¥å›¾ç‰‡ä¸­çš„éªŒè¯ç ')
+    data['TextBox1'] = input("è¯·è¾“å…¥å­¦å·")
+    data['TextBox2'] = input("è¯·è¾“å…¥å¯†ç ")
 
     return data
 
 
-# µÇÂ¼½ÌÎñÏµÍ³
+# ç™»å½•æ•™åŠ¡ç³»ç»Ÿ
 def login(url, data):
-    # Í¨¹ırequests¿â¹¹ÔìÒ»¸öä¯ÀÀÆ÷session£¬ÕâÄÜ°ïÎÒÃÇ×Ô¶¯¡¢³Ö¾ÃµÄ¹ÜÀícookies£¬
+    # é€šè¿‡requestsåº“æ„é€ ä¸€ä¸ªæµè§ˆå™¨sessionï¼Œè¿™èƒ½å¸®æˆ‘ä»¬è‡ªåŠ¨ã€æŒä¹…çš„ç®¡ç†cookiesï¼Œ
     s = requests.session()
     s.post(url, data=data)
     return s
@@ -114,7 +114,7 @@ def login(url, data):
 base_url = 'http://220.178.71.156:85/(tpz4avigqtgxvf45l324xrej)/default2.aspx'
 data = get_post_data(base_url)
 # print(data['TextBox1'])
-# Ä£ÄâµÇÂ¼½ÌÎñÏµÍ³
+# æ¨¡æ‹Ÿç™»å½•æ•™åŠ¡ç³»ç»Ÿ
 brow = login(base_url, data)
 test = brow.get(
     'http://220.178.71.156:85/(tpz4avigqtgxvf45l324xrej)/xs_main.aspx?xh=%s' % data['TextBox1'])
@@ -123,13 +123,13 @@ test = brow.get(
 ScoresURL = r'href="xscjcx.aspx\?([^<]*)" target'
 res = re.findall(ScoresURL, test.text)
 
-# ÑéÖ¤µÇÂ¼ÊÇ·ñ³É¹¦
+# éªŒè¯ç™»å½•æ˜¯å¦æˆåŠŸ
 if res:
     username = res[0].split('&')[1].replace('xm=', '')
     url = res[0]
-    print(username, u'µÇÂ¼³É¹¦£¡')
+    print(username, u'ç™»å½•æˆåŠŸï¼')
 else:
-    print(u'µÇÂ¼Ê§°Ü£¬ÇëÖØĞÂµÇÂ¼£¡')
+    print(u'ç™»å½•å¤±è´¥ï¼Œè¯·é‡æ–°ç™»å½•ï¼')
     url = ''
 
 Score_url = r'http://220.178.71.156:85/(tpz4avigqtgxvf45l324xrej)/xscjcx.aspx?%s' % url.encode('gb2312')
@@ -152,11 +152,11 @@ scoreData = {
         'ddlXN': '',
         'ddlXQ': '',
         'ddl_kcxz': '',
-        'btn_zcj': r'ÀúÄê³É¼¨'
+        'btn_zcj': r'å†å¹´æˆç»©'
     }
 headers["Referer"] = Score_url
-print(headers)
+# print(headers)
 scorePage = s.post(url=Score_urls, data=scoreData, headers=headers).content
-# print(scorePage)
+print(scorePage)
 get_scores('scores.txt', scorePage, 15)
 
