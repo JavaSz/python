@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eafa5b63-7f53-43ab-9433-ae3f83fc877f" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/爬虫实战/sspanelv3api/v3api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/爬虫实战/ZFJW/ZFJW.py" beforeDir="false" afterPath="$PROJECT_DIR$/爬虫实战/ZFJW/ZFJW.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/爬虫实战/ZFJW/ver_pic.png" beforeDir="false" afterPath="$PROJECT_DIR$/爬虫实战/ZFJW/ver_pic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/爬虫实战/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/爬虫实战/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py" beforeDir="false" afterPath="$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,17 +22,34 @@
     <SUITE FILE_PATH="coverage/Udacity$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1514979683824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mooc爬虫/解析HTML/正则表达式/实战/第三周" />
     <SUITE FILE_PATH="coverage/Udacity$draw_flower.coverage" NAME="draw_flower Coverage Results" MODIFIED="1508240958267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/Udacity$Unicode.coverage" NAME="Unicode Coverage Results" MODIFIED="1508753194605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python2Test" />
-    <SUITE FILE_PATH="coverage/python$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1526387219627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/爬虫实战/ZFJW" />
+    <SUITE FILE_PATH="coverage/python$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1527082547631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/爬虫实战/ZFJW" />
+    <SUITE FILE_PATH="coverage/python$auto_checkin.coverage" NAME="auto_checkin Coverage Results" MODIFIED="1527082554656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/爬虫实战/SSPANEL" />
     <SUITE FILE_PATH="coverage/Udacity$draw_name.coverage" NAME="draw_name Coverage Results" MODIFIED="1508152468101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Udaproj" />
+    <SUITE FILE_PATH="coverage/python$v3api.coverage" NAME="v3api Coverage Results" MODIFIED="1527089444484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/爬虫实战/sspanelv3api" />
     <SUITE FILE_PATH="coverage/Udacity$draw_up.coverage" NAME="draw_up Coverage Results" MODIFIED="1508149630810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Udaproj" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ZFJW.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/爬虫实战/ZFJW/ZFJW.py">
+      <file leaf-file-name="auto_checkin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            <state relative-caret-position="126">
+              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="80" />
+              <folding>
+                <element signature="e#154#169#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="v3api.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/爬虫实战/sspanelv3api/v3api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="e#147#162#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,8 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PythonUp/filter_fuc.py" />
-        <option value="$PROJECT_DIR$/draw_up.py" />
         <option value="$PROJECT_DIR$/Udaproj/draw_up.py" />
         <option value="$PROJECT_DIR$/Udaproj/draw_name.py" />
         <option value="$PROJECT_DIR$/Udaproj/draw_heart.py" />
@@ -112,6 +128,8 @@
         <option value="$PROJECT_DIR$/Mooc爬虫/解析HTML/正则表达式/re.py" />
         <option value="$PROJECT_DIR$/Mooc爬虫/解析HTML/正则表达式/zhengze.py" />
         <option value="$PROJECT_DIR$/爬虫实战/ZFJW/ZFJW.py" />
+        <option value="$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py" />
+        <option value="$PROJECT_DIR$/爬虫实战/sspanelv3api/v3api.py" />
       </list>
     </option>
   </component>
@@ -144,33 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python" type="cbb8eebc:String" user="python" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python" type="cbb8eebc:String" user="python" />
-              <item name="PythonSpirder" type="cbb8eebc:String" user="PythonSpirder" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python" type="cbb8eebc:String" user="python" />
-              <item name="爬虫实战" type="cbb8eebc:String" user="爬虫实战" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python" type="cbb8eebc:String" user="python" />
-              <item name="爬虫实战" type="cbb8eebc:String" user="爬虫实战" />
-              <item name="ZFJW" type="cbb8eebc:String" user="ZFJW" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,13 +183,40 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="python" type="cbb8eebc:String" user="python" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="python" type="cbb8eebc:String" user="python" />
+              <item name="PythonSpirder" type="cbb8eebc:String" user="PythonSpirder" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="python" type="cbb8eebc:String" user="python" />
+              <item name="爬虫实战" type="cbb8eebc:String" user="爬虫实战" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="python" type="cbb8eebc:String" user="python" />
+              <item name="爬虫实战" type="cbb8eebc:String" user="爬虫实战" />
+              <item name="sspanelv3api" type="cbb8eebc:String" user="sspanelv3api" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Udacity/Mooc爬虫/解析HTML/BeautifulSoup.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Student Records Management System" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -222,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.v3api">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
       <module name="Udacity" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -237,6 +255,44 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/爬虫实战/ZFJW/ZFJW.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="auto_checkin" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Udacity" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/爬虫实战/SSPANEL" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="v3api" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Udacity" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/爬虫实战/sspanelv3api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/爬虫实战/sspanelv3api/v3api.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -264,6 +320,17 @@
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.auto_checkin" />
+      <item itemvalue="Python.v3api" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.v3api" />
+        <item itemvalue="Python.auto_checkin" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -280,14 +347,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5058565" side_tool="true" weight="0.33541343" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32919255" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4941435" weight="0.45611286" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4941435" weight="0.32445142" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11054173" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
@@ -327,13 +393,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/爬虫实战/ZFJW/ZFJW.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/爬虫实战/ZFJW/ZFJW.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -628,6 +687,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="80" />
+          <folding>
+            <element signature="e#154#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/爬虫实战/sspanelv3api/v3api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#147#162#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

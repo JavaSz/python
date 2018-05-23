@@ -26,6 +26,7 @@ def checkin():
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     }
     post_data = 'email=' + email + '&passwd=' + password + '&code=&remember_me=week'
+    # print(post_data)
     post_data = post_data.encode()
     response = session.post(login_url, post_data, headers=headers, verify=False)
     # 签到
