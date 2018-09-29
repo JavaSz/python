@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eafa5b63-7f53-43ab-9433-ae3f83fc877f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/爬虫实战/sspanelv3api/v3api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/爬虫实战/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/爬虫实战/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py" beforeDir="false" afterPath="$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py" afterDir="false" />
-    </list>
+    <list default="true" id="eafa5b63-7f53-43ab-9433-ae3f83fc877f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +28,8 @@
       <file leaf-file-name="auto_checkin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="80" />
+            <state relative-caret-position="609">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="80" />
               <folding>
                 <element signature="e#154#169#0" expanded="true" />
               </folding>
@@ -45,8 +40,8 @@
       <file leaf-file-name="v3api.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/爬虫实战/sspanelv3api/v3api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="407">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#147#162#0" expanded="true" />
               </folding>
@@ -162,27 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Udacity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Udacity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
-              <item name="PythonSpirder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Udacity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
-              <item name="廖雪峰" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -210,13 +184,34 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Udacity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Udacity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
+              <item name="PythonSpirder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Udacity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
+              <item name="廖雪峰" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Udacity/Mooc爬虫/解析HTML/BeautifulSoup.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Student Records Management System" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -347,6 +342,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5058565" side_tool="true" weight="0.33541343" />
@@ -692,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/爬虫实战/SSPANEL/auto_checkin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="80" />
+        <state relative-caret-position="609">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="80" />
           <folding>
             <element signature="e#154#169#0" expanded="true" />
           </folding>
@@ -702,8 +698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/爬虫实战/sspanelv3api/v3api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="407">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="e#147#162#0" expanded="true" />
           </folding>
