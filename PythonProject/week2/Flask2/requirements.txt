@@ -9,7 +9,7 @@ colorama==0.3.9
 cycler==0.10.0
 Django==2.0.3
 docopt==0.6.2
-Flask==0.12.2
+Flask==1.0
 Flask-Markdown==0.3
 Flask-PageDown==0.2.2
 future==0.16.0
